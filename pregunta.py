@@ -32,8 +32,8 @@ def ingest_data():
     for i in data:
         if re.match('^ +[0-9]+ +', i):
             lista = i.split()
-            fila[0]=lista[0]
-            fila[1]=lista[1]
+            fila[0]=int(lista[0])
+            fila[1]=int(lista[1])
             fila[2]=lista[2]
             fila[3]=' '.join(lista[4:])  
         elif re.match('^ +[a-z]', i):

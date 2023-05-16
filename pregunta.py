@@ -34,7 +34,7 @@ def ingest_data():
             lista = i.split()
             fila[0]=int(lista[0])
             fila[1]=int(lista[1])
-            fila[2]=lista[2]
+            fila[2]= float(lista[2].replace(',','.'))
             fila[3]=' '.join(lista[4:])  
         elif re.match('^ +[a-z]', i):
             lista=i.split()
